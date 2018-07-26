@@ -1,0 +1,1305 @@
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:9
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateDogSitters (20180726150122)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "dog_sitters" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180726150122_create_dog_sitters.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180726150122"]]
+  ↳ bin/rails:9
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreatePuppies (20180726150259)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "puppies" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "owner" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180726150259_create_puppies.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180726150259"]]
+  ↳ bin/rails:9
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (1.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-07-26 15:07:19.859140"], ["updated_at", "2018-07-26 15:07:19.859140"]]
+  ↳ bin/rails:9
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateStrolls (20180726152050)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20180726152050_create_strolls.rb:3
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "strolls" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "date" datetime, "patient_id" integer, "doctor_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180726152050_create_strolls.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE  INDEX "index_strolls_on_patient_id" ON "strolls" ("patient_id")[0m
+  ↳ db/migrate/20180726152050_create_strolls.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_strolls_on_doctor_id" ON "strolls" ("doctor_id")[0m
+  ↳ db/migrate/20180726152050_create_strolls.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180726152050"]]
+  ↳ bin/rails:9
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mPuppy Create (0.7ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Ivy"], ["owner", "Owner n° 0"], ["created_at", "2018-07-26 15:43:20.681509"], ["updated_at", "2018-07-26 15:43:20.681509"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mPuppy Create (0.7ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Marty"], ["owner", "Owner n° 1"], ["created_at", "2018-07-26 15:43:20.687123"], ["updated_at", "2018-07-26 15:43:20.687123"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mPuppy Create (0.5ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Pasquale"], ["owner", "Owner n° 2"], ["created_at", "2018-07-26 15:43:20.692042"], ["updated_at", "2018-07-26 15:43:20.692042"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mPuppy Create (0.6ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Russell"], ["owner", "Owner n° 3"], ["created_at", "2018-07-26 15:43:20.698473"], ["updated_at", "2018-07-26 15:43:20.698473"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mPuppy Create (0.5ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Carman"], ["owner", "Owner n° 4"], ["created_at", "2018-07-26 15:43:20.704551"], ["updated_at", "2018-07-26 15:43:20.704551"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mPuppy Create (0.8ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Dorian"], ["owner", "Owner n° 5"], ["created_at", "2018-07-26 15:43:20.711100"], ["updated_at", "2018-07-26 15:43:20.711100"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (4.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mPuppy Create (0.7ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Miyoko"], ["owner", "Owner n° 6"], ["created_at", "2018-07-26 15:43:20.722524"], ["updated_at", "2018-07-26 15:43:20.722524"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mPuppy Create (0.6ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Tiffanie"], ["owner", "Owner n° 7"], ["created_at", "2018-07-26 15:43:20.729141"], ["updated_at", "2018-07-26 15:43:20.729141"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mPuppy Create (1.0ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Keva"], ["owner", "Owner n° 8"], ["created_at", "2018-07-26 15:43:20.733817"], ["updated_at", "2018-07-26 15:43:20.733817"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mPuppy Create (0.5ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Anibal"], ["owner", "Owner n° 9"], ["created_at", "2018-07-26 15:43:20.738729"], ["updated_at", "2018-07-26 15:43:20.738729"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mPuppy Create (0.6ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Edmond"], ["owner", "Owner n° 10"], ["created_at", "2018-07-26 15:43:20.744554"], ["updated_at", "2018-07-26 15:43:20.744554"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mPuppy Create (0.7ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Roderick"], ["owner", "Owner n° 11"], ["created_at", "2018-07-26 15:43:20.753136"], ["updated_at", "2018-07-26 15:43:20.753136"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mPuppy Create (0.7ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Samual"], ["owner", "Owner n° 12"], ["created_at", "2018-07-26 15:43:20.768993"], ["updated_at", "2018-07-26 15:43:20.768993"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mPuppy Create (0.7ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Freeman"], ["owner", "Owner n° 13"], ["created_at", "2018-07-26 15:43:20.775861"], ["updated_at", "2018-07-26 15:43:20.775861"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mPuppy Create (0.6ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Ernie"], ["owner", "Owner n° 14"], ["created_at", "2018-07-26 15:43:20.783296"], ["updated_at", "2018-07-26 15:43:20.783296"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mPuppy Create (0.7ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Marcus"], ["owner", "Owner n° 15"], ["created_at", "2018-07-26 15:43:20.789638"], ["updated_at", "2018-07-26 15:43:20.789638"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mPuppy Create (0.7ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Leland"], ["owner", "Owner n° 16"], ["created_at", "2018-07-26 15:43:20.797778"], ["updated_at", "2018-07-26 15:43:20.797778"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mPuppy Create (0.7ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Cher"], ["owner", "Owner n° 17"], ["created_at", "2018-07-26 15:43:20.803895"], ["updated_at", "2018-07-26 15:43:20.803895"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mPuppy Create (0.8ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Ronna"], ["owner", "Owner n° 18"], ["created_at", "2018-07-26 15:43:20.809905"], ["updated_at", "2018-07-26 15:43:20.809905"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mPuppy Create (0.5ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Gerald"], ["owner", "Owner n° 19"], ["created_at", "2018-07-26 15:43:20.815853"], ["updated_at", "2018-07-26 15:43:20.815853"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mPuppy Create (0.5ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Randy"], ["owner", "Owner n° 20"], ["created_at", "2018-07-26 15:43:20.819701"], ["updated_at", "2018-07-26 15:43:20.819701"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mPuppy Create (0.6ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Berry"], ["owner", "Owner n° 21"], ["created_at", "2018-07-26 15:43:20.825396"], ["updated_at", "2018-07-26 15:43:20.825396"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mPuppy Create (0.6ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Stefany"], ["owner", "Owner n° 22"], ["created_at", "2018-07-26 15:43:20.830763"], ["updated_at", "2018-07-26 15:43:20.830763"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mPuppy Create (0.4ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Kindra"], ["owner", "Owner n° 23"], ["created_at", "2018-07-26 15:43:20.835434"], ["updated_at", "2018-07-26 15:43:20.835434"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mPuppy Create (0.5ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Lee"], ["owner", "Owner n° 24"], ["created_at", "2018-07-26 15:43:20.839970"], ["updated_at", "2018-07-26 15:43:20.839970"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mPuppy Create (0.7ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Anthony"], ["owner", "Owner n° 25"], ["created_at", "2018-07-26 15:43:20.844344"], ["updated_at", "2018-07-26 15:43:20.844344"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mPuppy Create (0.5ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Wilton"], ["owner", "Owner n° 26"], ["created_at", "2018-07-26 15:43:20.849110"], ["updated_at", "2018-07-26 15:43:20.849110"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mPuppy Create (1.1ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Modesto"], ["owner", "Owner n° 27"], ["created_at", "2018-07-26 15:43:20.855702"], ["updated_at", "2018-07-26 15:43:20.855702"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mPuppy Create (0.7ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Marjory"], ["owner", "Owner n° 28"], ["created_at", "2018-07-26 15:43:20.876615"], ["updated_at", "2018-07-26 15:43:20.876615"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mPuppy Create (0.7ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Bennie"], ["owner", "Owner n° 29"], ["created_at", "2018-07-26 15:43:20.884747"], ["updated_at", "2018-07-26 15:43:20.884747"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mDogSitter Create (0.5ms)[0m  [1m[32mINSERT INTO "dog_sitters" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Magdalen"], ["last_name", "Pollich"], ["created_at", "2018-07-26 15:43:20.933076"], ["updated_at", "2018-07-26 15:43:20.933076"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mDogSitter Create (0.6ms)[0m  [1m[32mINSERT INTO "dog_sitters" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Pamelia"], ["last_name", "Kihn"], ["created_at", "2018-07-26 15:43:20.937255"], ["updated_at", "2018-07-26 15:43:20.937255"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mDogSitter Create (0.5ms)[0m  [1m[32mINSERT INTO "dog_sitters" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Jed"], ["last_name", "King"], ["created_at", "2018-07-26 15:43:20.941680"], ["updated_at", "2018-07-26 15:43:20.941680"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mDogSitter Create (0.4ms)[0m  [1m[32mINSERT INTO "dog_sitters" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Ramiro"], ["last_name", "Gleason"], ["created_at", "2018-07-26 15:43:20.945940"], ["updated_at", "2018-07-26 15:43:20.945940"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mDogSitter Create (0.4ms)[0m  [1m[32mINSERT INTO "dog_sitters" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Marshall"], ["last_name", "Schulist"], ["created_at", "2018-07-26 15:43:20.949128"], ["updated_at", "2018-07-26 15:43:20.949128"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mDogSitter Create (0.4ms)[0m  [1m[32mINSERT INTO "dog_sitters" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Logan"], ["last_name", "O'Conner"], ["created_at", "2018-07-26 15:43:20.952297"], ["updated_at", "2018-07-26 15:43:20.952297"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mDogSitter Create (0.7ms)[0m  [1m[32mINSERT INTO "dog_sitters" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Beverley"], ["last_name", "Schmeler"], ["created_at", "2018-07-26 15:43:20.956680"], ["updated_at", "2018-07-26 15:43:20.956680"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mDogSitter Create (0.7ms)[0m  [1m[32mINSERT INTO "dog_sitters" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Demetra"], ["last_name", "Friesen"], ["created_at", "2018-07-26 15:43:20.962654"], ["updated_at", "2018-07-26 15:43:20.962654"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mDogSitter Create (0.7ms)[0m  [1m[32mINSERT INTO "dog_sitters" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Margit"], ["last_name", "Jacobs"], ["created_at", "2018-07-26 15:43:20.968784"], ["updated_at", "2018-07-26 15:43:20.968784"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mDogSitter Create (0.7ms)[0m  [1m[32mINSERT INTO "dog_sitters" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Ronni"], ["last_name", "Crist"], ["created_at", "2018-07-26 15:43:20.974692"], ["updated_at", "2018-07-26 15:43:20.974692"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateStrolls (20180726152050)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[35mDROP TABLE "strolls"[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.4ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20180726152050"]]
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateStrolls (20180726152050)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20180726152050_create_strolls.rb:3
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "strolls" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "date" datetime, "puppy_id" integer, "dog_sitter_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180726152050_create_strolls.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_strolls_on_puppy_id" ON "strolls" ("puppy_id")[0m
+  ↳ db/migrate/20180726152050_create_strolls.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_strolls_on_dog_sitter_id" ON "strolls" ("dog_sitter_id")[0m
+  ↳ db/migrate/20180726152050_create_strolls.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180726152050"]]
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mPuppy Create (0.7ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Angelic"], ["owner", "Owner n° 0"], ["created_at", "2018-07-26 15:44:39.611127"], ["updated_at", "2018-07-26 15:44:39.611127"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mPuppy Create (0.5ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Cherie"], ["owner", "Owner n° 1"], ["created_at", "2018-07-26 15:44:39.615827"], ["updated_at", "2018-07-26 15:44:39.615827"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mPuppy Create (0.5ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Rochell"], ["owner", "Owner n° 2"], ["created_at", "2018-07-26 15:44:39.619938"], ["updated_at", "2018-07-26 15:44:39.619938"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mPuppy Create (0.5ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Dannie"], ["owner", "Owner n° 3"], ["created_at", "2018-07-26 15:44:39.624398"], ["updated_at", "2018-07-26 15:44:39.624398"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mPuppy Create (0.6ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Joyce"], ["owner", "Owner n° 4"], ["created_at", "2018-07-26 15:44:39.630925"], ["updated_at", "2018-07-26 15:44:39.630925"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mPuppy Create (0.7ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Karri"], ["owner", "Owner n° 5"], ["created_at", "2018-07-26 15:44:39.636593"], ["updated_at", "2018-07-26 15:44:39.636593"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mPuppy Create (0.5ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Nona"], ["owner", "Owner n° 6"], ["created_at", "2018-07-26 15:44:39.641843"], ["updated_at", "2018-07-26 15:44:39.641843"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mPuppy Create (0.9ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Nicole"], ["owner", "Owner n° 7"], ["created_at", "2018-07-26 15:44:39.646956"], ["updated_at", "2018-07-26 15:44:39.646956"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mPuppy Create (0.9ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Catrina"], ["owner", "Owner n° 8"], ["created_at", "2018-07-26 15:44:39.652808"], ["updated_at", "2018-07-26 15:44:39.652808"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mPuppy Create (0.7ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Tristan"], ["owner", "Owner n° 9"], ["created_at", "2018-07-26 15:44:39.659616"], ["updated_at", "2018-07-26 15:44:39.659616"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mPuppy Create (0.6ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Kandace"], ["owner", "Owner n° 10"], ["created_at", "2018-07-26 15:44:39.664676"], ["updated_at", "2018-07-26 15:44:39.664676"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mPuppy Create (1.0ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Domenic"], ["owner", "Owner n° 11"], ["created_at", "2018-07-26 15:44:39.669581"], ["updated_at", "2018-07-26 15:44:39.669581"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mPuppy Create (0.7ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Herman"], ["owner", "Owner n° 12"], ["created_at", "2018-07-26 15:44:39.675018"], ["updated_at", "2018-07-26 15:44:39.675018"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mPuppy Create (0.7ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Zena"], ["owner", "Owner n° 13"], ["created_at", "2018-07-26 15:44:39.680103"], ["updated_at", "2018-07-26 15:44:39.680103"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mPuppy Create (0.7ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Yong"], ["owner", "Owner n° 14"], ["created_at", "2018-07-26 15:44:39.685651"], ["updated_at", "2018-07-26 15:44:39.685651"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mPuppy Create (0.8ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Felisa"], ["owner", "Owner n° 15"], ["created_at", "2018-07-26 15:44:39.691756"], ["updated_at", "2018-07-26 15:44:39.691756"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mPuppy Create (0.8ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Hector"], ["owner", "Owner n° 16"], ["created_at", "2018-07-26 15:44:39.698012"], ["updated_at", "2018-07-26 15:44:39.698012"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mPuppy Create (0.7ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Douglas"], ["owner", "Owner n° 17"], ["created_at", "2018-07-26 15:44:39.703237"], ["updated_at", "2018-07-26 15:44:39.703237"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mPuppy Create (0.5ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Emily"], ["owner", "Owner n° 18"], ["created_at", "2018-07-26 15:44:39.708099"], ["updated_at", "2018-07-26 15:44:39.708099"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mPuppy Create (0.6ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Virgilio"], ["owner", "Owner n° 19"], ["created_at", "2018-07-26 15:44:39.712443"], ["updated_at", "2018-07-26 15:44:39.712443"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mPuppy Create (0.8ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Shelby"], ["owner", "Owner n° 20"], ["created_at", "2018-07-26 15:44:39.717019"], ["updated_at", "2018-07-26 15:44:39.717019"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mPuppy Create (0.8ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Genny"], ["owner", "Owner n° 21"], ["created_at", "2018-07-26 15:44:39.722218"], ["updated_at", "2018-07-26 15:44:39.722218"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mPuppy Create (0.7ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Leola"], ["owner", "Owner n° 22"], ["created_at", "2018-07-26 15:44:39.727674"], ["updated_at", "2018-07-26 15:44:39.727674"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mPuppy Create (0.5ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Pearl"], ["owner", "Owner n° 23"], ["created_at", "2018-07-26 15:44:39.734016"], ["updated_at", "2018-07-26 15:44:39.734016"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mPuppy Create (0.5ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Nigel"], ["owner", "Owner n° 24"], ["created_at", "2018-07-26 15:44:39.738520"], ["updated_at", "2018-07-26 15:44:39.738520"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mPuppy Create (0.5ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Booker"], ["owner", "Owner n° 25"], ["created_at", "2018-07-26 15:44:39.743572"], ["updated_at", "2018-07-26 15:44:39.743572"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mPuppy Create (0.8ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Derrick"], ["owner", "Owner n° 26"], ["created_at", "2018-07-26 15:44:39.748959"], ["updated_at", "2018-07-26 15:44:39.748959"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mPuppy Create (0.8ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Darwin"], ["owner", "Owner n° 27"], ["created_at", "2018-07-26 15:44:39.754453"], ["updated_at", "2018-07-26 15:44:39.754453"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mPuppy Create (0.7ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Colby"], ["owner", "Owner n° 28"], ["created_at", "2018-07-26 15:44:39.759655"], ["updated_at", "2018-07-26 15:44:39.759655"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mPuppy Create (0.6ms)[0m  [1m[32mINSERT INTO "puppies" ("name", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Bobbie"], ["owner", "Owner n° 29"], ["created_at", "2018-07-26 15:44:39.765346"], ["updated_at", "2018-07-26 15:44:39.765346"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mDogSitter Create (0.7ms)[0m  [1m[32mINSERT INTO "dog_sitters" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Casey"], ["last_name", "Fadel"], ["created_at", "2018-07-26 15:44:39.787704"], ["updated_at", "2018-07-26 15:44:39.787704"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mDogSitter Create (0.7ms)[0m  [1m[32mINSERT INTO "dog_sitters" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Angelena"], ["last_name", "Steuber"], ["created_at", "2018-07-26 15:44:39.793669"], ["updated_at", "2018-07-26 15:44:39.793669"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mDogSitter Create (1.0ms)[0m  [1m[32mINSERT INTO "dog_sitters" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Keiko"], ["last_name", "Wunsch"], ["created_at", "2018-07-26 15:44:39.799088"], ["updated_at", "2018-07-26 15:44:39.799088"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mDogSitter Create (0.8ms)[0m  [1m[32mINSERT INTO "dog_sitters" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Colby"], ["last_name", "Prosacco"], ["created_at", "2018-07-26 15:44:39.805559"], ["updated_at", "2018-07-26 15:44:39.805559"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mDogSitter Create (0.9ms)[0m  [1m[32mINSERT INTO "dog_sitters" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Damon"], ["last_name", "Bergnaum"], ["created_at", "2018-07-26 15:44:39.810482"], ["updated_at", "2018-07-26 15:44:39.810482"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mDogSitter Create (0.7ms)[0m  [1m[32mINSERT INTO "dog_sitters" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Warner"], ["last_name", "Prosacco"], ["created_at", "2018-07-26 15:44:39.816367"], ["updated_at", "2018-07-26 15:44:39.816367"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mDogSitter Create (0.7ms)[0m  [1m[32mINSERT INTO "dog_sitters" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Lillia"], ["last_name", "Stracke"], ["created_at", "2018-07-26 15:44:39.821090"], ["updated_at", "2018-07-26 15:44:39.821090"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mDogSitter Create (0.7ms)[0m  [1m[32mINSERT INTO "dog_sitters" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Rodolfo"], ["last_name", "Franecki"], ["created_at", "2018-07-26 15:44:39.826220"], ["updated_at", "2018-07-26 15:44:39.826220"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mDogSitter Create (0.8ms)[0m  [1m[32mINSERT INTO "dog_sitters" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Dana"], ["last_name", "Huel"], ["created_at", "2018-07-26 15:44:39.831145"], ["updated_at", "2018-07-26 15:44:39.831145"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mDogSitter Create (0.5ms)[0m  [1m[32mINSERT INTO "dog_sitters" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Kim"], ["last_name", "Borer"], ["created_at", "2018-07-26 15:44:39.838954"], ["updated_at", "2018-07-26 15:44:39.838954"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPuppy Load (0.3ms)[0m  [1m[34mSELECT  "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mDogSitter Load (0.2ms)[0m  [1m[34mSELECT  "dog_sitters".* FROM "dog_sitters" WHERE "dog_sitters"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mStroll Create (1.0ms)[0m  [1m[32mINSERT INTO "strolls" ("date", "puppy_id", "dog_sitter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["date", "2018-07-25 00:00:00"], ["puppy_id", 17], ["dog_sitter_id", 2], ["created_at", "2018-07-26 15:44:39.881482"], ["updated_at", "2018-07-26 15:44:39.881482"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT  "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mDogSitter Load (0.1ms)[0m  [1m[34mSELECT  "dog_sitters".* FROM "dog_sitters" WHERE "dog_sitters"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mStroll Create (0.9ms)[0m  [1m[32mINSERT INTO "strolls" ("date", "puppy_id", "dog_sitter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["date", "2018-07-25 00:00:00"], ["puppy_id", 1], ["dog_sitter_id", 4], ["created_at", "2018-07-26 15:44:39.889793"], ["updated_at", "2018-07-26 15:44:39.889793"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT  "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mDogSitter Load (0.1ms)[0m  [1m[34mSELECT  "dog_sitters".* FROM "dog_sitters" WHERE "dog_sitters"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mStroll Create (1.4ms)[0m  [1m[32mINSERT INTO "strolls" ("date", "puppy_id", "dog_sitter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["date", "2018-07-25 00:00:00"], ["puppy_id", 16], ["dog_sitter_id", 2], ["created_at", "2018-07-26 15:44:39.898538"], ["updated_at", "2018-07-26 15:44:39.898538"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT  "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mDogSitter Load (0.1ms)[0m  [1m[34mSELECT  "dog_sitters".* FROM "dog_sitters" WHERE "dog_sitters"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mStroll Create (1.1ms)[0m  [1m[32mINSERT INTO "strolls" ("date", "puppy_id", "dog_sitter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["date", "2018-07-25 00:00:00"], ["puppy_id", 5], ["dog_sitter_id", 2], ["created_at", "2018-07-26 15:44:39.909500"], ["updated_at", "2018-07-26 15:44:39.909500"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT  "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mDogSitter Load (0.1ms)[0m  [1m[34mSELECT  "dog_sitters".* FROM "dog_sitters" WHERE "dog_sitters"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mStroll Create (0.8ms)[0m  [1m[32mINSERT INTO "strolls" ("date", "puppy_id", "dog_sitter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["date", "2018-07-26 00:00:00"], ["puppy_id", 8], ["dog_sitter_id", 4], ["created_at", "2018-07-26 15:44:39.918106"], ["updated_at", "2018-07-26 15:44:39.918106"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPuppy Load (0.3ms)[0m  [1m[34mSELECT  "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mDogSitter Load (0.1ms)[0m  [1m[34mSELECT  "dog_sitters".* FROM "dog_sitters" WHERE "dog_sitters"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mStroll Create (1.1ms)[0m  [1m[32mINSERT INTO "strolls" ("date", "puppy_id", "dog_sitter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["date", "2018-07-25 00:00:00"], ["puppy_id", 12], ["dog_sitter_id", 2], ["created_at", "2018-07-26 15:44:39.931713"], ["updated_at", "2018-07-26 15:44:39.931713"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT  "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mDogSitter Load (0.1ms)[0m  [1m[34mSELECT  "dog_sitters".* FROM "dog_sitters" WHERE "dog_sitters"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mStroll Create (0.6ms)[0m  [1m[32mINSERT INTO "strolls" ("date", "puppy_id", "dog_sitter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["date", "2018-07-24 00:00:00"], ["puppy_id", 12], ["dog_sitter_id", 3], ["created_at", "2018-07-26 15:44:39.941034"], ["updated_at", "2018-07-26 15:44:39.941034"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPuppy Load (0.1ms)[0m  [1m[34mSELECT  "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mDogSitter Load (0.1ms)[0m  [1m[34mSELECT  "dog_sitters".* FROM "dog_sitters" WHERE "dog_sitters"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mStroll Create (0.6ms)[0m  [1m[32mINSERT INTO "strolls" ("date", "puppy_id", "dog_sitter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["date", "2018-07-25 00:00:00"], ["puppy_id", 3], ["dog_sitter_id", 4], ["created_at", "2018-07-26 15:44:39.947720"], ["updated_at", "2018-07-26 15:44:39.947720"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPuppy Load (0.1ms)[0m  [1m[34mSELECT  "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mDogSitter Load (0.1ms)[0m  [1m[34mSELECT  "dog_sitters".* FROM "dog_sitters" WHERE "dog_sitters"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mStroll Create (0.5ms)[0m  [1m[32mINSERT INTO "strolls" ("date", "puppy_id", "dog_sitter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["date", "2018-07-24 00:00:00"], ["puppy_id", 3], ["dog_sitter_id", 1], ["created_at", "2018-07-26 15:44:39.953244"], ["updated_at", "2018-07-26 15:44:39.953244"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT  "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mDogSitter Load (0.1ms)[0m  [1m[34mSELECT  "dog_sitters".* FROM "dog_sitters" WHERE "dog_sitters"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mStroll Create (0.7ms)[0m  [1m[32mINSERT INTO "strolls" ("date", "puppy_id", "dog_sitter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["date", "2018-07-26 00:00:00"], ["puppy_id", 18], ["dog_sitter_id", 4], ["created_at", "2018-07-26 15:44:39.959050"], ["updated_at", "2018-07-26 15:44:39.959050"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPuppy Load (0.1ms)[0m  [1m[34mSELECT  "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mDogSitter Load (0.1ms)[0m  [1m[34mSELECT  "dog_sitters".* FROM "dog_sitters" WHERE "dog_sitters"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mStroll Create (0.6ms)[0m  [1m[32mINSERT INTO "strolls" ("date", "puppy_id", "dog_sitter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["date", "2018-07-24 00:00:00"], ["puppy_id", 7], ["dog_sitter_id", 3], ["created_at", "2018-07-26 15:44:39.964594"], ["updated_at", "2018-07-26 15:44:39.964594"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT  "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mDogSitter Load (0.3ms)[0m  [1m[34mSELECT  "dog_sitters".* FROM "dog_sitters" WHERE "dog_sitters"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mStroll Create (0.7ms)[0m  [1m[32mINSERT INTO "strolls" ("date", "puppy_id", "dog_sitter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["date", "2018-07-26 00:00:00"], ["puppy_id", 3], ["dog_sitter_id", 5], ["created_at", "2018-07-26 15:44:39.972078"], ["updated_at", "2018-07-26 15:44:39.972078"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT  "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mDogSitter Load (0.1ms)[0m  [1m[34mSELECT  "dog_sitters".* FROM "dog_sitters" WHERE "dog_sitters"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mStroll Create (0.8ms)[0m  [1m[32mINSERT INTO "strolls" ("date", "puppy_id", "dog_sitter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["date", "2018-07-24 00:00:00"], ["puppy_id", 6], ["dog_sitter_id", 2], ["created_at", "2018-07-26 15:44:39.980502"], ["updated_at", "2018-07-26 15:44:39.980502"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT  "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mDogSitter Load (0.1ms)[0m  [1m[34mSELECT  "dog_sitters".* FROM "dog_sitters" WHERE "dog_sitters"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mStroll Create (0.8ms)[0m  [1m[32mINSERT INTO "strolls" ("date", "puppy_id", "dog_sitter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["date", "2018-07-26 00:00:00"], ["puppy_id", 3], ["dog_sitter_id", 1], ["created_at", "2018-07-26 15:44:39.988433"], ["updated_at", "2018-07-26 15:44:39.988433"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT  "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mDogSitter Load (0.1ms)[0m  [1m[34mSELECT  "dog_sitters".* FROM "dog_sitters" WHERE "dog_sitters"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mStroll Create (0.8ms)[0m  [1m[32mINSERT INTO "strolls" ("date", "puppy_id", "dog_sitter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["date", "2018-07-25 00:00:00"], ["puppy_id", 15], ["dog_sitter_id", 3], ["created_at", "2018-07-26 15:44:39.995914"], ["updated_at", "2018-07-26 15:44:39.995914"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT  "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mDogSitter Load (0.1ms)[0m  [1m[34mSELECT  "dog_sitters".* FROM "dog_sitters" WHERE "dog_sitters"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mStroll Create (0.7ms)[0m  [1m[32mINSERT INTO "strolls" ("date", "puppy_id", "dog_sitter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["date", "2018-07-26 00:00:00"], ["puppy_id", 5], ["dog_sitter_id", 5], ["created_at", "2018-07-26 15:44:40.004583"], ["updated_at", "2018-07-26 15:44:40.004583"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT  "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mDogSitter Load (0.1ms)[0m  [1m[34mSELECT  "dog_sitters".* FROM "dog_sitters" WHERE "dog_sitters"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mStroll Create (0.8ms)[0m  [1m[32mINSERT INTO "strolls" ("date", "puppy_id", "dog_sitter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["date", "2018-07-25 00:00:00"], ["puppy_id", 4], ["dog_sitter_id", 5], ["created_at", "2018-07-26 15:44:40.013445"], ["updated_at", "2018-07-26 15:44:40.013445"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT  "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mDogSitter Load (0.1ms)[0m  [1m[34mSELECT  "dog_sitters".* FROM "dog_sitters" WHERE "dog_sitters"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mStroll Create (0.8ms)[0m  [1m[32mINSERT INTO "strolls" ("date", "puppy_id", "dog_sitter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["date", "2018-07-26 00:00:00"], ["puppy_id", 15], ["dog_sitter_id", 4], ["created_at", "2018-07-26 15:44:40.022222"], ["updated_at", "2018-07-26 15:44:40.022222"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT  "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mDogSitter Load (0.1ms)[0m  [1m[34mSELECT  "dog_sitters".* FROM "dog_sitters" WHERE "dog_sitters"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mStroll Create (0.8ms)[0m  [1m[32mINSERT INTO "strolls" ("date", "puppy_id", "dog_sitter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["date", "2018-07-26 00:00:00"], ["puppy_id", 5], ["dog_sitter_id", 1], ["created_at", "2018-07-26 15:44:40.037828"], ["updated_at", "2018-07-26 15:44:40.037828"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (5.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT  "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mDogSitter Load (0.1ms)[0m  [1m[34mSELECT  "dog_sitters".* FROM "dog_sitters" WHERE "dog_sitters"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mStroll Create (0.8ms)[0m  [1m[32mINSERT INTO "strolls" ("date", "puppy_id", "dog_sitter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["date", "2018-07-24 00:00:00"], ["puppy_id", 1], ["dog_sitter_id", 1], ["created_at", "2018-07-26 15:44:40.052827"], ["updated_at", "2018-07-26 15:44:40.052827"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT  "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mDogSitter Load (0.1ms)[0m  [1m[34mSELECT  "dog_sitters".* FROM "dog_sitters" WHERE "dog_sitters"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mStroll Create (0.7ms)[0m  [1m[32mINSERT INTO "strolls" ("date", "puppy_id", "dog_sitter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["date", "2018-07-24 00:00:00"], ["puppy_id", 7], ["dog_sitter_id", 3], ["created_at", "2018-07-26 15:44:40.061693"], ["updated_at", "2018-07-26 15:44:40.061693"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT  "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mDogSitter Load (0.1ms)[0m  [1m[34mSELECT  "dog_sitters".* FROM "dog_sitters" WHERE "dog_sitters"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mStroll Create (0.8ms)[0m  [1m[32mINSERT INTO "strolls" ("date", "puppy_id", "dog_sitter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["date", "2018-07-26 00:00:00"], ["puppy_id", 8], ["dog_sitter_id", 5], ["created_at", "2018-07-26 15:44:40.069650"], ["updated_at", "2018-07-26 15:44:40.069650"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT  "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mDogSitter Load (0.1ms)[0m  [1m[34mSELECT  "dog_sitters".* FROM "dog_sitters" WHERE "dog_sitters"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mStroll Create (0.8ms)[0m  [1m[32mINSERT INTO "strolls" ("date", "puppy_id", "dog_sitter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["date", "2018-07-24 00:00:00"], ["puppy_id", 14], ["dog_sitter_id", 2], ["created_at", "2018-07-26 15:44:40.078796"], ["updated_at", "2018-07-26 15:44:40.078796"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT  "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mDogSitter Load (0.1ms)[0m  [1m[34mSELECT  "dog_sitters".* FROM "dog_sitters" WHERE "dog_sitters"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mStroll Create (0.8ms)[0m  [1m[32mINSERT INTO "strolls" ("date", "puppy_id", "dog_sitter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["date", "2018-07-26 00:00:00"], ["puppy_id", 7], ["dog_sitter_id", 2], ["created_at", "2018-07-26 15:44:40.086297"], ["updated_at", "2018-07-26 15:44:40.086297"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPuppy Load (0.3ms)[0m  [1m[34mSELECT  "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mDogSitter Load (0.1ms)[0m  [1m[34mSELECT  "dog_sitters".* FROM "dog_sitters" WHERE "dog_sitters"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mStroll Create (2.5ms)[0m  [1m[32mINSERT INTO "strolls" ("date", "puppy_id", "dog_sitter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["date", "2018-07-25 00:00:00"], ["puppy_id", 12], ["dog_sitter_id", 1], ["created_at", "2018-07-26 15:44:40.094329"], ["updated_at", "2018-07-26 15:44:40.094329"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT  "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mDogSitter Load (0.1ms)[0m  [1m[34mSELECT  "dog_sitters".* FROM "dog_sitters" WHERE "dog_sitters"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mStroll Create (0.8ms)[0m  [1m[32mINSERT INTO "strolls" ("date", "puppy_id", "dog_sitter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["date", "2018-07-25 00:00:00"], ["puppy_id", 18], ["dog_sitter_id", 1], ["created_at", "2018-07-26 15:44:40.104745"], ["updated_at", "2018-07-26 15:44:40.104745"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT  "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mDogSitter Load (0.1ms)[0m  [1m[34mSELECT  "dog_sitters".* FROM "dog_sitters" WHERE "dog_sitters"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mStroll Create (1.1ms)[0m  [1m[32mINSERT INTO "strolls" ("date", "puppy_id", "dog_sitter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["date", "2018-07-24 00:00:00"], ["puppy_id", 15], ["dog_sitter_id", 2], ["created_at", "2018-07-26 15:44:40.118018"], ["updated_at", "2018-07-26 15:44:40.118018"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT  "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mDogSitter Load (0.1ms)[0m  [1m[34mSELECT  "dog_sitters".* FROM "dog_sitters" WHERE "dog_sitters"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mStroll Create (0.7ms)[0m  [1m[32mINSERT INTO "strolls" ("date", "puppy_id", "dog_sitter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["date", "2018-07-24 00:00:00"], ["puppy_id", 11], ["dog_sitter_id", 4], ["created_at", "2018-07-26 15:44:40.135995"], ["updated_at", "2018-07-26 15:44:40.135995"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT  "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mDogSitter Load (0.1ms)[0m  [1m[34mSELECT  "dog_sitters".* FROM "dog_sitters" WHERE "dog_sitters"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mStroll Create (0.7ms)[0m  [1m[32mINSERT INTO "strolls" ("date", "puppy_id", "dog_sitter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["date", "2018-07-26 00:00:00"], ["puppy_id", 15], ["dog_sitter_id", 2], ["created_at", "2018-07-26 15:44:40.143413"], ["updated_at", "2018-07-26 15:44:40.143413"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT  "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mDogSitter Load (0.1ms)[0m  [1m[34mSELECT  "dog_sitters".* FROM "dog_sitters" WHERE "dog_sitters"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mStroll Create (0.5ms)[0m  [1m[32mINSERT INTO "strolls" ("date", "puppy_id", "dog_sitter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["date", "2018-07-26 00:00:00"], ["puppy_id", 8], ["dog_sitter_id", 4], ["created_at", "2018-07-26 15:44:40.150360"], ["updated_at", "2018-07-26 15:44:40.150360"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT  "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mDogSitter Load (0.1ms)[0m  [1m[34mSELECT  "dog_sitters".* FROM "dog_sitters" WHERE "dog_sitters"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mStroll Create (0.7ms)[0m  [1m[32mINSERT INTO "strolls" ("date", "puppy_id", "dog_sitter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["date", "2018-07-25 00:00:00"], ["puppy_id", 20], ["dog_sitter_id", 4], ["created_at", "2018-07-26 15:44:40.156133"], ["updated_at", "2018-07-26 15:44:40.156133"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT  "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mDogSitter Load (0.1ms)[0m  [1m[34mSELECT  "dog_sitters".* FROM "dog_sitters" WHERE "dog_sitters"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mStroll Create (0.8ms)[0m  [1m[32mINSERT INTO "strolls" ("date", "puppy_id", "dog_sitter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["date", "2018-07-25 00:00:00"], ["puppy_id", 20], ["dog_sitter_id", 3], ["created_at", "2018-07-26 15:44:40.167124"], ["updated_at", "2018-07-26 15:44:40.167124"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (27.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT  "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mDogSitter Load (0.4ms)[0m  [1m[34mSELECT  "dog_sitters".* FROM "dog_sitters" WHERE "dog_sitters"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mStroll Create (8.3ms)[0m  [1m[32mINSERT INTO "strolls" ("date", "puppy_id", "dog_sitter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["date", "2018-07-26 00:00:00"], ["puppy_id", 4], ["dog_sitter_id", 5], ["created_at", "2018-07-26 15:44:40.221888"], ["updated_at", "2018-07-26 15:44:40.221888"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT  "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mDogSitter Load (0.1ms)[0m  [1m[34mSELECT  "dog_sitters".* FROM "dog_sitters" WHERE "dog_sitters"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mStroll Create (0.8ms)[0m  [1m[32mINSERT INTO "strolls" ("date", "puppy_id", "dog_sitter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["date", "2018-07-25 00:00:00"], ["puppy_id", 4], ["dog_sitter_id", 5], ["created_at", "2018-07-26 15:44:40.244324"], ["updated_at", "2018-07-26 15:44:40.244324"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT  "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mDogSitter Load (0.1ms)[0m  [1m[34mSELECT  "dog_sitters".* FROM "dog_sitters" WHERE "dog_sitters"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mStroll Create (0.5ms)[0m  [1m[32mINSERT INTO "strolls" ("date", "puppy_id", "dog_sitter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["date", "2018-07-25 00:00:00"], ["puppy_id", 9], ["dog_sitter_id", 2], ["created_at", "2018-07-26 15:44:40.251216"], ["updated_at", "2018-07-26 15:44:40.251216"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT  "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mDogSitter Load (0.1ms)[0m  [1m[34mSELECT  "dog_sitters".* FROM "dog_sitters" WHERE "dog_sitters"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mStroll Create (0.6ms)[0m  [1m[32mINSERT INTO "strolls" ("date", "puppy_id", "dog_sitter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["date", "2018-07-25 00:00:00"], ["puppy_id", 4], ["dog_sitter_id", 1], ["created_at", "2018-07-26 15:44:40.256978"], ["updated_at", "2018-07-26 15:44:40.256978"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT  "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mDogSitter Load (0.1ms)[0m  [1m[34mSELECT  "dog_sitters".* FROM "dog_sitters" WHERE "dog_sitters"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mStroll Create (0.8ms)[0m  [1m[32mINSERT INTO "strolls" ("date", "puppy_id", "dog_sitter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["date", "2018-07-24 00:00:00"], ["puppy_id", 13], ["dog_sitter_id", 4], ["created_at", "2018-07-26 15:44:40.264476"], ["updated_at", "2018-07-26 15:44:40.264476"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPuppy Load (0.3ms)[0m  [1m[34mSELECT  "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mDogSitter Load (0.1ms)[0m  [1m[34mSELECT  "dog_sitters".* FROM "dog_sitters" WHERE "dog_sitters"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mStroll Create (0.8ms)[0m  [1m[32mINSERT INTO "strolls" ("date", "puppy_id", "dog_sitter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["date", "2018-07-24 00:00:00"], ["puppy_id", 16], ["dog_sitter_id", 2], ["created_at", "2018-07-26 15:44:40.275887"], ["updated_at", "2018-07-26 15:44:40.275887"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT  "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mDogSitter Load (0.1ms)[0m  [1m[34mSELECT  "dog_sitters".* FROM "dog_sitters" WHERE "dog_sitters"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mStroll Create (0.8ms)[0m  [1m[32mINSERT INTO "strolls" ("date", "puppy_id", "dog_sitter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["date", "2018-07-25 00:00:00"], ["puppy_id", 13], ["dog_sitter_id", 3], ["created_at", "2018-07-26 15:44:40.284179"], ["updated_at", "2018-07-26 15:44:40.284179"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT  "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mDogSitter Load (0.1ms)[0m  [1m[34mSELECT  "dog_sitters".* FROM "dog_sitters" WHERE "dog_sitters"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mStroll Create (0.8ms)[0m  [1m[32mINSERT INTO "strolls" ("date", "puppy_id", "dog_sitter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["date", "2018-07-26 00:00:00"], ["puppy_id", 20], ["dog_sitter_id", 1], ["created_at", "2018-07-26 15:44:40.291818"], ["updated_at", "2018-07-26 15:44:40.291818"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT  "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mDogSitter Load (0.1ms)[0m  [1m[34mSELECT  "dog_sitters".* FROM "dog_sitters" WHERE "dog_sitters"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mStroll Create (0.8ms)[0m  [1m[32mINSERT INTO "strolls" ("date", "puppy_id", "dog_sitter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["date", "2018-07-24 00:00:00"], ["puppy_id", 15], ["dog_sitter_id", 2], ["created_at", "2018-07-26 15:44:40.300617"], ["updated_at", "2018-07-26 15:44:40.300617"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT  "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mDogSitter Load (0.1ms)[0m  [1m[34mSELECT  "dog_sitters".* FROM "dog_sitters" WHERE "dog_sitters"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mStroll Create (0.8ms)[0m  [1m[32mINSERT INTO "strolls" ("date", "puppy_id", "dog_sitter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["date", "2018-07-26 00:00:00"], ["puppy_id", 20], ["dog_sitter_id", 5], ["created_at", "2018-07-26 15:44:40.310024"], ["updated_at", "2018-07-26 15:44:40.310024"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT  "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mDogSitter Load (0.1ms)[0m  [1m[34mSELECT  "dog_sitters".* FROM "dog_sitters" WHERE "dog_sitters"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mStroll Create (0.9ms)[0m  [1m[32mINSERT INTO "strolls" ("date", "puppy_id", "dog_sitter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["date", "2018-07-25 00:00:00"], ["puppy_id", 20], ["dog_sitter_id", 3], ["created_at", "2018-07-26 15:44:40.318332"], ["updated_at", "2018-07-26 15:44:40.318332"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT  "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mDogSitter Load (0.1ms)[0m  [1m[34mSELECT  "dog_sitters".* FROM "dog_sitters" WHERE "dog_sitters"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mStroll Create (0.8ms)[0m  [1m[32mINSERT INTO "strolls" ("date", "puppy_id", "dog_sitter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["date", "2018-07-24 00:00:00"], ["puppy_id", 16], ["dog_sitter_id", 4], ["created_at", "2018-07-26 15:44:40.326488"], ["updated_at", "2018-07-26 15:44:40.326488"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPuppy Load (0.1ms)[0m  [1m[34mSELECT  "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mDogSitter Load (0.1ms)[0m  [1m[34mSELECT  "dog_sitters".* FROM "dog_sitters" WHERE "dog_sitters"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mStroll Create (0.7ms)[0m  [1m[32mINSERT INTO "strolls" ("date", "puppy_id", "dog_sitter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["date", "2018-07-26 00:00:00"], ["puppy_id", 3], ["dog_sitter_id", 4], ["created_at", "2018-07-26 15:44:40.334534"], ["updated_at", "2018-07-26 15:44:40.334534"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPuppy Load (0.1ms)[0m  [1m[34mSELECT  "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mDogSitter Load (0.1ms)[0m  [1m[34mSELECT  "dog_sitters".* FROM "dog_sitters" WHERE "dog_sitters"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mStroll Create (0.5ms)[0m  [1m[32mINSERT INTO "strolls" ("date", "puppy_id", "dog_sitter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["date", "2018-07-26 00:00:00"], ["puppy_id", 7], ["dog_sitter_id", 2], ["created_at", "2018-07-26 15:44:40.343958"], ["updated_at", "2018-07-26 15:44:40.343958"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPuppy Load (0.1ms)[0m  [1m[34mSELECT  "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mDogSitter Load (0.1ms)[0m  [1m[34mSELECT  "dog_sitters".* FROM "dog_sitters" WHERE "dog_sitters"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mStroll Create (0.7ms)[0m  [1m[32mINSERT INTO "strolls" ("date", "puppy_id", "dog_sitter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["date", "2018-07-25 00:00:00"], ["puppy_id", 6], ["dog_sitter_id", 1], ["created_at", "2018-07-26 15:44:40.353767"], ["updated_at", "2018-07-26 15:44:40.353767"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT  "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mDogSitter Load (0.1ms)[0m  [1m[34mSELECT  "dog_sitters".* FROM "dog_sitters" WHERE "dog_sitters"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mStroll Create (0.8ms)[0m  [1m[32mINSERT INTO "strolls" ("date", "puppy_id", "dog_sitter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["date", "2018-07-24 00:00:00"], ["puppy_id", 16], ["dog_sitter_id", 2], ["created_at", "2018-07-26 15:44:40.364922"], ["updated_at", "2018-07-26 15:44:40.364922"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPuppy Load (0.3ms)[0m  [1m[34mSELECT  "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mDogSitter Load (0.1ms)[0m  [1m[34mSELECT  "dog_sitters".* FROM "dog_sitters" WHERE "dog_sitters"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mStroll Create (0.9ms)[0m  [1m[32mINSERT INTO "strolls" ("date", "puppy_id", "dog_sitter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["date", "2018-07-25 00:00:00"], ["puppy_id", 15], ["dog_sitter_id", 1], ["created_at", "2018-07-26 15:44:40.373740"], ["updated_at", "2018-07-26 15:44:40.373740"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT  "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mDogSitter Load (0.1ms)[0m  [1m[34mSELECT  "dog_sitters".* FROM "dog_sitters" WHERE "dog_sitters"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mStroll Create (0.8ms)[0m  [1m[32mINSERT INTO "strolls" ("date", "puppy_id", "dog_sitter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["date", "2018-07-26 00:00:00"], ["puppy_id", 9], ["dog_sitter_id", 3], ["created_at", "2018-07-26 15:44:40.389076"], ["updated_at", "2018-07-26 15:44:40.389076"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT  "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mDogSitter Load (0.1ms)[0m  [1m[34mSELECT  "dog_sitters".* FROM "dog_sitters" WHERE "dog_sitters"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mStroll Create (0.7ms)[0m  [1m[32mINSERT INTO "strolls" ("date", "puppy_id", "dog_sitter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["date", "2018-07-26 00:00:00"], ["puppy_id", 2], ["dog_sitter_id", 3], ["created_at", "2018-07-26 15:44:40.397516"], ["updated_at", "2018-07-26 15:44:40.397516"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT  "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mDogSitter Load (0.1ms)[0m  [1m[34mSELECT  "dog_sitters".* FROM "dog_sitters" WHERE "dog_sitters"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mStroll Create (0.7ms)[0m  [1m[32mINSERT INTO "strolls" ("date", "puppy_id", "dog_sitter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["date", "2018-07-25 00:00:00"], ["puppy_id", 11], ["dog_sitter_id", 4], ["created_at", "2018-07-26 15:44:40.405905"], ["updated_at", "2018-07-26 15:44:40.405905"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPuppy Load (0.3ms)[0m  [1m[34mSELECT  "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mDogSitter Load (0.1ms)[0m  [1m[34mSELECT  "dog_sitters".* FROM "dog_sitters" WHERE "dog_sitters"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mStroll Create (0.7ms)[0m  [1m[32mINSERT INTO "strolls" ("date", "puppy_id", "dog_sitter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["date", "2018-07-24 00:00:00"], ["puppy_id", 19], ["dog_sitter_id", 2], ["created_at", "2018-07-26 15:44:40.414096"], ["updated_at", "2018-07-26 15:44:40.414096"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPuppy Load (0.1ms)[0m  [1m[34mSELECT  "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mDogSitter Load (0.1ms)[0m  [1m[34mSELECT  "dog_sitters".* FROM "dog_sitters" WHERE "dog_sitters"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mStroll Create (0.6ms)[0m  [1m[32mINSERT INTO "strolls" ("date", "puppy_id", "dog_sitter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["date", "2018-07-24 00:00:00"], ["puppy_id", 1], ["dog_sitter_id", 5], ["created_at", "2018-07-26 15:44:40.420882"], ["updated_at", "2018-07-26 15:44:40.420882"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT  "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mDogSitter Load (0.1ms)[0m  [1m[34mSELECT  "dog_sitters".* FROM "dog_sitters" WHERE "dog_sitters"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mStroll Create (0.5ms)[0m  [1m[32mINSERT INTO "strolls" ("date", "puppy_id", "dog_sitter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["date", "2018-07-26 00:00:00"], ["puppy_id", 4], ["dog_sitter_id", 2], ["created_at", "2018-07-26 15:44:40.434080"], ["updated_at", "2018-07-26 15:44:40.434080"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT  "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mDogSitter Load (0.1ms)[0m  [1m[34mSELECT  "dog_sitters".* FROM "dog_sitters" WHERE "dog_sitters"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mStroll Create (0.6ms)[0m  [1m[32mINSERT INTO "strolls" ("date", "puppy_id", "dog_sitter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["date", "2018-07-25 00:00:00"], ["puppy_id", 19], ["dog_sitter_id", 1], ["created_at", "2018-07-26 15:44:40.440186"], ["updated_at", "2018-07-26 15:44:40.440186"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPuppy Load (0.1ms)[0m  [1m[34mSELECT  "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mDogSitter Load (0.1ms)[0m  [1m[34mSELECT  "dog_sitters".* FROM "dog_sitters" WHERE "dog_sitters"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mStroll Create (0.7ms)[0m  [1m[32mINSERT INTO "strolls" ("date", "puppy_id", "dog_sitter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["date", "2018-07-25 00:00:00"], ["puppy_id", 4], ["dog_sitter_id", 2], ["created_at", "2018-07-26 15:44:40.447452"], ["updated_at", "2018-07-26 15:44:40.447452"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPuppy Load (0.1ms)[0m  [1m[34mSELECT  "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mDogSitter Load (0.0ms)[0m  [1m[34mSELECT  "dog_sitters".* FROM "dog_sitters" WHERE "dog_sitters"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mStroll Create (0.5ms)[0m  [1m[32mINSERT INTO "strolls" ("date", "puppy_id", "dog_sitter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["date", "2018-07-24 00:00:00"], ["puppy_id", 9], ["dog_sitter_id", 4], ["created_at", "2018-07-26 15:44:40.452930"], ["updated_at", "2018-07-26 15:44:40.452930"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPuppy Load (0.3ms)[0m  [1m[34mSELECT  "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mDogSitter Load (0.1ms)[0m  [1m[34mSELECT  "dog_sitters".* FROM "dog_sitters" WHERE "dog_sitters"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mStroll Create (3.1ms)[0m  [1m[32mINSERT INTO "strolls" ("date", "puppy_id", "dog_sitter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["date", "2018-07-25 00:00:00"], ["puppy_id", 9], ["dog_sitter_id", 3], ["created_at", "2018-07-26 15:44:40.460109"], ["updated_at", "2018-07-26 15:44:40.460109"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT  "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mDogSitter Load (0.1ms)[0m  [1m[34mSELECT  "dog_sitters".* FROM "dog_sitters" WHERE "dog_sitters"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mStroll Create (0.7ms)[0m  [1m[32mINSERT INTO "strolls" ("date", "puppy_id", "dog_sitter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["date", "2018-07-24 00:00:00"], ["puppy_id", 7], ["dog_sitter_id", 3], ["created_at", "2018-07-26 15:44:40.469213"], ["updated_at", "2018-07-26 15:44:40.469213"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT  "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mDogSitter Load (0.1ms)[0m  [1m[34mSELECT  "dog_sitters".* FROM "dog_sitters" WHERE "dog_sitters"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mStroll Create (0.8ms)[0m  [1m[32mINSERT INTO "strolls" ("date", "puppy_id", "dog_sitter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["date", "2018-07-25 00:00:00"], ["puppy_id", 13], ["dog_sitter_id", 4], ["created_at", "2018-07-26 15:44:40.477421"], ["updated_at", "2018-07-26 15:44:40.477421"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT  "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mDogSitter Load (0.1ms)[0m  [1m[34mSELECT  "dog_sitters".* FROM "dog_sitters" WHERE "dog_sitters"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mStroll Create (0.9ms)[0m  [1m[32mINSERT INTO "strolls" ("date", "puppy_id", "dog_sitter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["date", "2018-07-26 00:00:00"], ["puppy_id", 11], ["dog_sitter_id", 1], ["created_at", "2018-07-26 15:44:40.532526"], ["updated_at", "2018-07-26 15:44:40.532526"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT  "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mDogSitter Load (0.1ms)[0m  [1m[34mSELECT  "dog_sitters".* FROM "dog_sitters" WHERE "dog_sitters"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mStroll Create (1.3ms)[0m  [1m[32mINSERT INTO "strolls" ("date", "puppy_id", "dog_sitter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["date", "2018-07-25 00:00:00"], ["puppy_id", 9], ["dog_sitter_id", 1], ["created_at", "2018-07-26 15:44:40.544314"], ["updated_at", "2018-07-26 15:44:40.544314"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT  "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mDogSitter Load (0.1ms)[0m  [1m[34mSELECT  "dog_sitters".* FROM "dog_sitters" WHERE "dog_sitters"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mStroll Create (0.9ms)[0m  [1m[32mINSERT INTO "strolls" ("date", "puppy_id", "dog_sitter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["date", "2018-07-24 00:00:00"], ["puppy_id", 14], ["dog_sitter_id", 2], ["created_at", "2018-07-26 15:44:40.553913"], ["updated_at", "2018-07-26 15:44:40.553913"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT  "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mDogSitter Load (0.2ms)[0m  [1m[34mSELECT  "dog_sitters".* FROM "dog_sitters" WHERE "dog_sitters"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mStroll Create (2.2ms)[0m  [1m[32mINSERT INTO "strolls" ("date", "puppy_id", "dog_sitter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["date", "2018-07-24 00:00:00"], ["puppy_id", 16], ["dog_sitter_id", 5], ["created_at", "2018-07-26 15:44:40.564873"], ["updated_at", "2018-07-26 15:44:40.564873"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT  "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mDogSitter Load (0.1ms)[0m  [1m[34mSELECT  "dog_sitters".* FROM "dog_sitters" WHERE "dog_sitters"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mStroll Create (0.8ms)[0m  [1m[32mINSERT INTO "strolls" ("date", "puppy_id", "dog_sitter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["date", "2018-07-24 00:00:00"], ["puppy_id", 11], ["dog_sitter_id", 5], ["created_at", "2018-07-26 15:44:40.577281"], ["updated_at", "2018-07-26 15:44:40.577281"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT  "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mDogSitter Load (0.1ms)[0m  [1m[34mSELECT  "dog_sitters".* FROM "dog_sitters" WHERE "dog_sitters"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mStroll Create (4.7ms)[0m  [1m[32mINSERT INTO "strolls" ("date", "puppy_id", "dog_sitter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["date", "2018-07-25 00:00:00"], ["puppy_id", 3], ["dog_sitter_id", 3], ["created_at", "2018-07-26 15:44:40.585565"], ["updated_at", "2018-07-26 15:44:40.585565"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPuppy Load (0.3ms)[0m  [1m[34mSELECT  "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mDogSitter Load (0.1ms)[0m  [1m[34mSELECT  "dog_sitters".* FROM "dog_sitters" WHERE "dog_sitters"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mStroll Create (0.9ms)[0m  [1m[32mINSERT INTO "strolls" ("date", "puppy_id", "dog_sitter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["date", "2018-07-24 00:00:00"], ["puppy_id", 5], ["dog_sitter_id", 4], ["created_at", "2018-07-26 15:44:40.601034"], ["updated_at", "2018-07-26 15:44:40.601034"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT  "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mDogSitter Load (0.1ms)[0m  [1m[34mSELECT  "dog_sitters".* FROM "dog_sitters" WHERE "dog_sitters"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mStroll Create (0.5ms)[0m  [1m[32mINSERT INTO "strolls" ("date", "puppy_id", "dog_sitter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["date", "2018-07-24 00:00:00"], ["puppy_id", 6], ["dog_sitter_id", 2], ["created_at", "2018-07-26 15:44:40.610387"], ["updated_at", "2018-07-26 15:44:40.610387"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPuppy Load (0.2ms)[0m  [1m[34mSELECT  "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mDogSitter Load (0.2ms)[0m  [1m[34mSELECT  "dog_sitters".* FROM "dog_sitters" WHERE "dog_sitters"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mStroll Create (0.6ms)[0m  [1m[32mINSERT INTO "strolls" ("date", "puppy_id", "dog_sitter_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["date", "2018-07-26 00:00:00"], ["puppy_id", 5], ["dog_sitter_id", 5], ["created_at", "2018-07-26 15:44:40.617631"], ["updated_at", "2018-07-26 15:44:40.617631"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPuppy Load (0.4ms)[0m  [1m[34mSELECT  "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mDogSitter Load (0.5ms)[0m  [1m[34mSELECT  "dog_sitters".* FROM "dog_sitters" INNER JOIN "strolls" ON "dog_sitters"."id" = "strolls"."dog_sitter_id" WHERE "strolls"."puppy_id" = ? LIMIT ?[0m  [["puppy_id", 2], ["LIMIT", 11]]
+  [1m[36mPuppy Load (0.3ms)[0m  [1m[34mSELECT  "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mDogSitter Load (0.2ms)[0m  [1m[34mSELECT  "dog_sitters".* FROM "dog_sitters" INNER JOIN "strolls" ON "dog_sitters"."id" = "strolls"."dog_sitter_id" WHERE "strolls"."puppy_id" = ? LIMIT ?[0m  [["puppy_id", 10], ["LIMIT", 11]]
+  [1m[36mPuppy Load (0.3ms)[0m  [1m[34mSELECT  "puppies".* FROM "puppies" WHERE "puppies"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mDogSitter Load (0.5ms)[0m  [1m[34mSELECT  "dog_sitters".* FROM "dog_sitters" INNER JOIN "strolls" ON "dog_sitters"."id" = "strolls"."dog_sitter_id" WHERE "strolls"."puppy_id" = ? LIMIT ?[0m  [["puppy_id", 15], ["LIMIT", 11]]
