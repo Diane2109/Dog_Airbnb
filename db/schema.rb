@@ -10,13 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_26_152050) do
+ActiveRecord::Schema.define(version: 2018_07_26_212110) do
+
+  create_table "cities", force: :cascade do |t|
+    t.string "city_name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "dog_sitters", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "city_id"
+    t.index ["city_id"], name: "index_dog_sitters_on_city_id"
   end
 
   create_table "puppies", force: :cascade do |t|
@@ -24,6 +32,8 @@ ActiveRecord::Schema.define(version: 2018_07_26_152050) do
     t.string "owner"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "city_id"
+    t.index ["city_id"], name: "index_puppies_on_city_id"
   end
 
   create_table "strolls", force: :cascade do |t|
